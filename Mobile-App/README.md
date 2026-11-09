@@ -24,8 +24,6 @@ Uses the iPhone 16 Pro simulator. For another one: `make run DEVICE="iPhone 16"`
 
 ## Deploy
 
-**Live at:** https://apps.apple.com/in/app/broom-minimalist-declutter/id6761337910
-
 **Where it runs:** App Store, bundle id `com.kohjakob.broom`.
 
 **Needs:** Apple Developer team `4TDG4JP93N` and App Store Connect access.
