@@ -1,4 +1,4 @@
-Docs/
+/Docs/
 .env
 .env.*
 !.env.example
