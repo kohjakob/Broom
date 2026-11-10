@@ -1,19 +1,43 @@
 # Broom
 
-An iOS app for decluttering. You photograph what you own, sort it into categories and compare items two at a time to find out what you care about.
+An iOS app for decluttering. You photograph what you own, sort it into categories and compare items two at a time to find out what you care about. Built with Flutter. Items and photos stay on the phone. If you add a Claude API key, it can suggest item names from photos.
 
-- **Status:** Live
-- **Live at:** [App Store](https://apps.apple.com/in/app/broom-minimalist-declutter/id6761337910)
-- **Repo:** [kohjakob/broom](https://github.com/kohjakob/broom) (public), inside `Mobile-App/`
+On the [App Store](https://apps.apple.com/in/app/broom-minimalist-declutter/id6761337910).
 
-## Folders
+## Requirements
 
-| Folder | What it is |
-|---|---|
-| `Mobile-App/` | The Flutter app |
-| `Docs/` | Spec and App Store text. Not in git |
-| `Assets/` | App icon |
+- Flutter 3.47.7 (Dart 3.13.5)
+- Xcode 27.2, with an iOS simulator
+- CocoaPods
 
-## Getting started
+## Setup
 
-Open [Mobile-App/README.md](Mobile-App/README.md).
+```bash
+make setup
+```
+
+## Run
+
+```bash
+make run
+```
+
+Uses the iPhone 16 Pro simulator. For another one: `make run DEVICE="iPhone 16"`.
+
+## Deploy
+
+**Where it runs:** App Store, bundle id `com.kohjakob.broom`.
+
+**Needs:** Apple Developer team `4TDG4JP93N` and App Store Connect access.
+
+Raise `version` in `pubspec.yaml`, then:
+
+```bash
+flutter build ipa
+```
+
+Upload `build/ios/ipa/*.ipa` with the Transporter app, then submit the build in App Store Connect.
+
+## Configuration
+
+The Claude API key is optional. It's entered in the app's settings.
